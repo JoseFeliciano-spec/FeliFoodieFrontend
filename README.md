@@ -1,6 +1,6 @@
-## Felitasks App
+## Felifoodie App
 
-Bienvenido a **Felitasks**, una aplicación de lista de tareas (To-Do) creada con **Next.js** versión 14 en el frontend y **NestJS** en el backend. Esta aplicación permite a los usuarios gestionar sus tareas de manera fácil y rápida a través de una interfaz intuitiva y un backend escalable. Este proyecto utiliza **Server Actions** en Next.js, por lo que es necesario habilitarlas.
+Bienvenido a **Felifoodie**, una aplicación de lista de tareas (To-Do) creada con **Next.js** versión 14 en el frontend y **NestJS** en el backend. Esta aplicación permite a los usuarios gestionar sus tareas de manera fácil y rápida a través de una interfaz intuitiva y un backend escalable. Este proyecto utiliza **Server Actions** en Next.js, por lo que es necesario habilitarlas.
 
 ## Demo
 
@@ -71,6 +71,8 @@ Si deseas ejecutar esta aplicación localmente, sigue los pasos a continuación.
 1. Asegúrate de configurar la variable de entorno `API_URL` en el archivo `.env.local` dentro de la carpeta `frontend`:
    ```plaintext
    API_URL=https://todo-backend-nest-jjq1.onrender.com/
+   NEXT_PUBLIC_API_URL = <TU URL DE BACKEND>
+   NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=<TU_API_GOOGLE_MAPS_JAVASCRIPT_SDK>
    ```
 2. Accede a http://localhost:3000 en tu navegador.
 3. Crea, marca como completadas o elimina tareas según lo necesites.

@@ -11,6 +11,7 @@ const config: Config = {
   	extend: {
   		colors: {
 			"principal-color": "#00574A",
+			"mobile-color": "#003732",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

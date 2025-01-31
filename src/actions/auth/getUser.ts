@@ -9,6 +9,7 @@ interface UserResponse {
     name: string;
     email: string;
     createdAt: string;
+    token?: string;
   };
   errors?: string;
 }
@@ -56,6 +57,7 @@ export async function getUser(): Promise<UserResponse> {
         name: data.data.name,
         email: data.data.email,
         createdAt: data.data.createdAt,
+        token: token.value,
       },
     };
   } catch (error) {

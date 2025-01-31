@@ -24,7 +24,7 @@ interface CommandSearchProps {
   url: string;
   placeholder?: string;
   required?: boolean;
-  onValueChange?: (value: string) => void;
+  onValueChange?: (value: string | any) => void;
   mappingData?: (item: any) => Location;
   className?: string;
   classNameDropdown?: string;
@@ -176,7 +176,7 @@ export default function CommandSearch({
                                   setOpen(false);
                                   onValueChange?.(location?.id);
                                   if (location?.onClick) {
-                                    location?.onClick();
+                                    onValueChange?.(location?.onClick);
                                   }
                                 }}
                                 className="flex items-center gap-2 px-4 py-3 w-48 cursor-pointer hover:bg-[#00736D]/10
