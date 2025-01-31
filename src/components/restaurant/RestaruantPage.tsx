@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const fetchRestaurant = (placeId: string) => {
-  return axios.get(`http://localhost:8080/v1/places/search-restaurant`, {
+  return axios.get(`/v1/places/search-restaurant`, {
     params: { search: placeId },
   });
 };

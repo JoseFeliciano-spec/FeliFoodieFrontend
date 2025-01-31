@@ -182,7 +182,7 @@ export default function BrowserHome({ country, place }: any) {
                   onClick={() => {
                     router.push(`/${restaurant?.placeId}`);
                   }}
-                  className="overflow-hidden hover:shadow-lg transition-shadow"
+                  className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
                 >
                   <div className="flex flex-col md:grid md:grid-cols-[1fr_1.5fr] lg:grid-cols-[1fr_1.5fr]">
                     <div className="relative">

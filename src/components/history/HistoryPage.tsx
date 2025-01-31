@@ -66,7 +66,7 @@ const HistoryPage = ({ user }: any) => {
     return (
       <div className="w-full min-h-screen flex items-center justify-center">
         <div className="text-red-500">
-          Error al cargar los lugares:{" "}
+          Error al cargar los lugares: {!user && "Inicia sesión"}
           {error instanceof Error ? error.message : "Unknown error"}
         </div>
       </div>
@@ -99,13 +99,13 @@ const HistoryPage = ({ user }: any) => {
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious
+                  title="Anterior"
                   onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
                   className={cn(
                     "cursor-pointer",
                     !paginatedData?.hasPreviousPage &&
                       "pointer-events-none opacity-50"
                   )}
-                  title="Anterior"
                 />
               </PaginationItem>
 

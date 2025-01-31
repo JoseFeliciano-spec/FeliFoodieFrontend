@@ -58,15 +58,6 @@ export default async function ProviderHome({ children }: any) {
                     <span>Historial</span>
                   </Link>
                 </SheetClose>
-                <SheetClose asChild>
-                  <Link
-                    href="/favorites"
-                    className="flex items-center gap-2 px-2 py-2 hover:bg-gray-100 rounded-md"
-                  >
-                    <Star className="h-5 w-5" />
-                    <span>Favoritos</span>
-                  </Link>
-                </SheetClose>
               </nav>
             </SheetContent>
           </Sheet>
