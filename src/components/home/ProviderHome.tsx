@@ -13,14 +13,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import {
-  UserCircle,
-  ChevronDown,
-  Menu,
-  History,
-  Search,
-  Star,
-} from "lucide-react";
+import { UserCircle, ChevronDown, Menu, History, Search } from "lucide-react";
 import logo from "@/assets/png/logo.png";
 import { getUser } from "@/actions/auth/getUser";
 import ButtonLogout from "@/components/auth/ButtonLogout";
