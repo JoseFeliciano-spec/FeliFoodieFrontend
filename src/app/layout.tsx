@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
+import ProviderQuery from "@/components/home/ProviderQuery";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -16,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Felitask | Proyecto realizado por Jose Feliciano",
-  description: "Felitask creado con Next.js",
+  title: "Felifoodie | Proyecto realizado por Jose Feliciano",
+  description: "Felifoodie creado con Next.js",
 };
 
 export default function RootLayout({
@@ -29,13 +30,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-        {modal}
-        <Toaster position="top-right" reverseOrder={false} />
-      </body>
+      <ProviderQuery>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+          {modal}
+          <Toaster position="top-right" reverseOrder={false} />
+        </body>
+      </ProviderQuery>
     </html>
   );
 }
