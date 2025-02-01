@@ -66,7 +66,7 @@ const HistoryPage = ({ user }: any) => {
     return (
       <div className="w-full min-h-screen flex items-center justify-center">
         <div className="text-red-500">
-          Error al cargar los lugares: {!user && "Inicia sesión"}
+          Error al cargar los lugares: {!user && "Inicia sesión - "}
           {error instanceof Error ? error.message : "Unknown error"}
         </div>
       </div>
