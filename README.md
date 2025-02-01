@@ -1,21 +1,22 @@
 ## Felifoodie App
 
-Bienvenido a **Felifoodie**, una aplicación de lista de tareas (To-Do) creada con **Next.js** versión 14 en el frontend y **NestJS** en el backend. Esta aplicación permite a los usuarios gestionar sus tareas de manera fácil y rápida a través de una interfaz intuitiva y un backend escalable. Este proyecto utiliza **Server Actions** en Next.js, por lo que es necesario habilitarlas.
+Aplicación web para descubrir restaurantes, construida con Next.js 14.
+Conectada a un backend en NestJS para búsquedas avanzadas y autenticación segura.
 
 ## Demo
 
 Puedes acceder a la aplicación en vivo en el siguiente enlace:  
-[Frontend - Todo App](https://todo-frontend-next-puce.vercel.app/)
+[Frontend - Felifoodie App](https://feli-foodie-frontend.vercel.app/)
 
 > **Nota:** Para iniciar el backend, ya que está alojado en Render y puede estar en modo de suspensión, visita esta URL para activar el servidor:  
-> [Backend - Todo API](https://todo-backend-nest-jjq1.onrender.com/)
+> [Backend - Felifoodie API]([https://todo-backend-nest-jjq1.onrender.com/](https://felifoodiebackend-1.onrender.com/docs))
 
 ## Características
 
-- **Crear tareas:** Agrega nuevas tareas a tu lista.
-- **Marcar como completadas:** Marca tareas como completadas a medida que avanzas.
-- **Eliminar tareas:** Elimina tareas que ya no necesitas.
-- **Persistencia de datos:** La aplicación guarda tus tareas para que puedas acceder a ellas en cualquier momento.
+🔍 Búsqueda inteligente: Filtra restaurantes por ciudad o nombre.
+🌟 Recomendaciones destacadas: Top 4 de restaurantes mejor valorados.
+📅 Historial personalizado: Accede a tus búsquedas recientes.
+📱 Diseño responsive: Optimizado para móviles y desktop.
 
 ## Tecnologías Utilizadas
 
@@ -30,14 +31,25 @@ Debido a que el proyecto utiliza **Server Actions** en Next.js 14, es importante
 ## Imágenes de Referencia
 
 ### Vista principal de la aplicación
-![Vista Principal]!![3](https://github.com/user-attachments/assets/4565e269-8222-47d4-8e44-646548b5a7f8)
+![WhatsApp Image 2025-01-31 at 7 09 28 PM](https://github.com/user-attachments/assets/950fc47e-9d09-4585-83f1-3bd09753a484)
 
-### Ejemplo de tareas completadas
-![Tareas Completadas]![1](https://github.com/user-attachments/assets/beb2a9dc-36b9-48ab-aa79-20b0af18d0ad)
+### Vista principal buscando una ciudad con el AutoCompleteSearch
+![Captura de pantalla 2025-01-31 193836](https://github.com/user-attachments/assets/b9caada7-b072-4aa2-bf4a-45ce6224073b)
 
+### Buscador de los restaurantes
+![WhatsApp Image 2025-01-31 at 7 09 29 PM](https://github.com/user-attachments/assets/b37103ef-7859-4616-8a4e-feee69f4ab3a)
 
-### Formulario de creación de tareas
-![Formulario de Tareas]![2](https://github.com/user-attachments/assets/c0b35904-f80a-4ef3-bd32-4bbad33fc61c)
+### Detalle de los restaurantes
+![WhatsApp Image 2025-01-31 at 7 09 29 PM (2)](https://github.com/user-attachments/assets/e09d8aa7-43f0-4d3b-88a3-d9a2fd143899)
+
+### Opiniones de los usuarios
+![image](https://github.com/user-attachments/assets/cf918d64-8fd2-4b4f-8450-93783cf1951a)
+
+### Galería de fotos
+![image](https://github.com/user-attachments/assets/2acc7bce-a711-4b51-9bd9-ce9fbec40134)
+
+### Diseño Móvil
+![image](https://github.com/user-attachments/assets/587246a2-401d-4433-913b-366874796c53)
 
 
 ## Instalación Local
@@ -70,7 +82,7 @@ Si deseas ejecutar esta aplicación localmente, sigue los pasos a continuación.
 0. Inicia el Backend que se encuentra en mi repositorio o usa el remoto.
 1. Asegúrate de configurar la variable de entorno `API_URL` en el archivo `.env.local` dentro de la carpeta `frontend`:
    ```plaintext
-   API_URL=https://todo-backend-nest-jjq1.onrender.com/
+   API_URL=https://felifoodiebackend-1.onrender.com
    NEXT_PUBLIC_API_URL = <TU URL DE BACKEND>
    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=<TU_API_GOOGLE_MAPS_JAVASCRIPT_SDK>
    ```
