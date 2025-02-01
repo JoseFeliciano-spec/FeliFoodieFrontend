@@ -16,7 +16,47 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { UtensilsCrossed } from "lucide-react";
+import { useRouter } from "next/navigation";
+
+const RestaurantNotFound = () => {
+  const router = useRouter();
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="max-w-md w-full">
+        <Alert variant="destructive" className="mb-6">
+          <UtensilsCrossed className="h-5 w-5" />
+          <AlertTitle className="ml-2">Restaurante no encontrado</AlertTitle>
+          <AlertDescription>
+            Lo sentimos, no pudimos encontrar el restaurante que estás buscando.
+          </AlertDescription>
+        </Alert>
+
+        <div className="text-center space-y-4">
+          <p className="text-gray-600">
+            Esto puede deberse a que el restaurante ya no existe o la
+            información no está disponible en este momento.
+          </p>
+
+          <div className="flex flex-col gap-2">
+            <Button
+              onClick={() => router.back()}
+              variant="outline"
+              className="w-full"
+            >
+              Volver atrás
+            </Button>
+
+            <Button onClick={() => router.push("/")} className="w-full">
+              Ir al inicio
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const fetchRestaurant = (placeId: string) => {
   return axios.get(`/v1/places/search-restaurant`, {
@@ -72,6 +112,8 @@ export default function RestaurantPage({
   if (isError) return <div>Error: {error.message}</div>;
 
   const restaurantData = restaurant?.data;
+
+  if (!restaurantData) return <RestaurantNotFound />;
 
   const isCurrentlyOpen = () => {
     if (!restaurantData?.openingHours) return false;

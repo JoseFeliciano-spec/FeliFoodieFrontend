@@ -1,5 +1,5 @@
 import { getUser } from "@/actions/auth/getUser";
-import RestaurantPage from "@/components/restaurant/RestaruantPage";
+import RestaurantPage from "@/components/restaurant/RestaurantPage";
 import { Metadata } from "next";
 import { axios } from "@/lib/axios"; // Usamos la misma instancia de axios
 
