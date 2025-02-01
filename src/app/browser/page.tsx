@@ -35,7 +35,7 @@ export async function generateMetadata({
     title: `Explora los Mejores Restaurantes en ${cityName} | FeliFoodie`,
     description: `Descubre ${totalRestaurants} restaurantes en ${cityName}. Encuentra los mejores lugares para comer, calificaciones, reseñas y más.`,
     openGraph: {
-      title: `Restaurantes en ${cityName} | FoodFinder`,
+      title: `Restaurantes en ${cityName} | FeliFoodie`,
       description: `Explora ${totalRestaurants} restaurantes en ${cityName}. Encuentra el lugar perfecto para tu próxima experiencia gastronómica.`,
       type: "website",
       url: `/browser${searchParams.country ? `/${searchParams.country}` : ""}`,
@@ -50,7 +50,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `Restaurantes en ${cityName} | FoodFinder`,
+      title: `Restaurantes en ${cityName} | FeliFoodie`,
       description: `Descubre los mejores restaurantes en ${cityName}. Calificaciones, ubicaciones y reseñas de usuarios.`,
       images: {
         url: "/browser-og-image.jpg",
